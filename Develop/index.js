@@ -134,21 +134,13 @@ promptUser()
   .then(promptProject)
   .then(portfolioData => {
     return generatePage(portfolioData);
-  })
-  .then(pageHTML => {
-    return writeFile(pageHTML);
-  })
-  .then(writeFileResponse => {
-    console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then(copyFileResponse => {
-    console.log(copyFileResponse);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+    //removed .then(pageHTML =>) as it would not link to README, reverted to previous module code
+  fs.writeFile('.README.md', pageHTML, err => {
+      if (err) throw new Error(err);
 
+      console.log('README created! Checkout README.mmd in this directory to see it!');
+  });
+});
 
 // function to initialize program
 // function init() {}
