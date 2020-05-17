@@ -46,4 +46,3 @@ const generateAbout = aboutText => {
         # ${header.name}
       `;
     };
-    module.exports = generatePage;
