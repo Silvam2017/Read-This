@@ -1,0 +1,23 @@
+{
+  "name": "read-this",
+  "version": "1.0.0",
+  "description": "[How to create a Professional README](./readme-guide.md)",
+  "main": "template-page.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silvam2017/Read-This.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silvam2017/Read-This/issues"
+  },
+  "homepage": "https://github.com/Silvam2017/Read-This#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "node": "^14.2.0"
+  }
+}
