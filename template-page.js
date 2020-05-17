@@ -1,4 +1,4 @@
-const generatePage = (name, github) => {
+
     const generateAbout = aboutText => {
       if (!aboutText) {
         return '';
@@ -47,5 +47,4 @@ const generatePage = (name, github) => {
         # ${header.name}
       `;
     };
-  };
     module.exports = generatePage;

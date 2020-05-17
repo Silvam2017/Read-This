@@ -1,6 +1,6 @@
 var inquirer = require('inquirer');
 var fs = require('fs');
-const generatePage = require('.template-page');
+const generatePage = require('./template-page');
 // array of questions for user
 const promptUser = () => {
     return inquirer.prompt([
