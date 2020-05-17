@@ -1,5 +1,4 @@
-
-    const generateAbout = aboutText => {
+const generateAbout = aboutText => {
       if (!aboutText) {
         return '';
       }

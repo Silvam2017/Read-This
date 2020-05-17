@@ -49,7 +49,6 @@ const promptUser = () => {
         }
       ]);
     };
-;
 const promptProject = portfolioData => {
 
     if (!portfolioData.projects) {
@@ -133,9 +132,8 @@ const promptProject = portfolioData => {
 promptUser()
   .then(promptProject)
   .then(portfolioData => {
-    return generatePage(portfolioData);
-    //removed .then(pageHTML =>) as it would not link to README, reverted to previous module code
-  fs.writeFile('.README.md', pageHTML, err => {
+    const pageHTML = generatePage(portfolioData);
+  fs.writeFile('./README.md', pageHTML, err => {
       if (err) throw new Error(err);
 
       console.log('README created! Checkout README.mmd in this directory to see it!');
