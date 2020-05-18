@@ -8,6 +8,8 @@
 * Download the files from the repository.
 * Navigate to the directory you have downloaded the files to within your terminal (Ex: Command Prompt).
 * Run the following commands within the terminal "npm init", "npm install inquirer", "npm install node".
+#### Need additional help? Check out this YouTube video demonstrating the Read-This README Generator 
+### [YouTube Demo](https://youtu.be/xD5vP0E0Ezg)
 ## <a id="usage"></a>Usage
 * You may now run the Read-This README generator by running this command "node index.js".
 * Type your answers into the terminal and press enter to move on to the next next question.
