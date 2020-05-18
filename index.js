@@ -71,10 +71,62 @@ const promptProject = portfolioData => {
           }
         },
         {
-          type: 'checkbox',
-          name: 'languages',
-          message: 'What did you make this project with? (Check all that apply)',
-          choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        type: 'input',
+        name: 'installation',
+        message: 'Please provide installation instructions (Required)',
+        validate: installationInput => {
+          if (installationInput) {
+            return true;
+          } else {
+            console.log('Please enter a project description.');
+            return false;
+          }
+        }
+        },
+        {
+        type: 'input',
+        name: 'contribution',
+        message: 'Please provide contribution guidelines (Required)',
+        validate: contributionInput => {
+          if (contributionInput) {
+            return true;
+          } else {
+            console.log('Please enter a project description.');
+            return false;
+          }
+        }
+        },
+        {
+        type: 'input',
+        name: 'test',
+        message: 'Please provide test instructions (Required)',
+        validate: testInput => {
+          if (testInput) {
+            return true;
+          } else {
+            console.log('Please enter a project description.');
+            return false;
+          }
+        }
+        },
+        {
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide usage information for your project (Required)',
+        validate: usageInput => {
+          if (usageInput) {
+            return true;
+          } else {
+            console.log('Please enter a project description.');
+            return false;
+          }
+        }
+        },
+        {
+        type: 'checkbox',
+        name: 'languages',
+        message: 'What did you make this project with? (Check all that apply)',
+        choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
         },
         {
           type: 'input',
@@ -85,6 +137,19 @@ const promptProject = portfolioData => {
               return true;
             } else {
               console.log('Please enter the link to your GitHub Repository.');
+              return false;
+            }
+          }
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email address?',
+          validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please enter your email address.');
               return false;
             }
           }
@@ -107,7 +172,7 @@ promptUser()
   fs.writeFile('./userREADME.md', pageHTML, err => {
       if (err) throw new Error(err);
 
-      console.log('README created! Checkout README.md in this directory to see it!');
+      console.log('README created! Checkout userREADME.md in this directory to see it!');
   });
 });
 
